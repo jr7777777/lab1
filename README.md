@@ -11,14 +11,12 @@ int main(int argc, char **argv) {
     }
     const string filename = argv[1];
     
-    // Opens the file
+    
     ifstream infile(filename);
     if (!infile.is_open()) {
         cerr << "ERROR: Could not open file " << filename << endl;
         return 1;
     }
-
-    // Variables to hold file data
     string last_name;
     string first_name;
     double balance;
@@ -31,7 +29,8 @@ int main(int argc, char **argv) {
         cout << "Name: " << first_name << " " << last_name << " (" << account_no << ")" << endl;
         cout << "Balance: " << balance << endl << endl;
     }
-
+    
+    // Close the file
     infile.close();
 
     return 0;
